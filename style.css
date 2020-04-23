@@ -363,7 +363,42 @@ textarea:focus {
     padding-bottom: 20px;
 }
 
+.logo > div:nth-child(1) img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform;
+    -moz-transition-duration: 1s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform;
+    -ms-transition-duration: 1s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform;
+    -o-transition-duration: 1s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.logo:hover > div:nth-child(1) img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 .logo h3 {
+    display: block;
     font-family: "Gilroy";
     font-size: 30px;
     line-height: 30px;
@@ -372,6 +407,7 @@ textarea:focus {
 }
 
 .logo p {
+    display: block;
     font-size: 12px;
     line-height: 17px;
     color: #7c8f8f;

@@ -145,6 +145,11 @@
 	    padding: 7px 0;
 	}
 
+	.main_nav li a {
+	    font-size: 21px;
+	    line-height: 21px;
+	}
+
 	/*-- /Header --*/
 
 	/*-- Section 1 - Main Page --*/

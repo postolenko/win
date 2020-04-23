@@ -1,0 +1,919 @@
+@charset "utf-8";
+
+/*------------------*/
+/*-- Fonts --*/
+/*------------------*/
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("fonts/PlayfairDisplay-Regular.eot");
+    src: url("fonts/PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+        url("fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+        url("fonts/PlayfairDisplay-Regular.woff") format("woff"),
+        url("fonts/PlayfairDisplay-Regular.ttf") format("truetype"),
+        url("fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("fonts/Gilroy-ExtraBold.eot");
+    src: url("fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"),
+        url("fonts/Gilroy-ExtraBold.woff2") format("woff2"),
+        url("fonts/Gilroy-ExtraBold.woff") format("woff"),
+        url("fonts/Gilroy-ExtraBold.ttf") format("truetype"),
+        url("fonts/Gilroy-ExtraBold.svg#Gilroy-ExtraBold") format("svg");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Casper";
+    src: url("fonts/Casper.eot");
+    src: url("fonts/Casper.eot?#iefix") format("embedded-opentype"),
+        url("fonts/Casper.woff2") format("woff2"),
+        url("fonts/Casper.woff") format("woff"),
+        url("fonts/Casper.ttf") format("truetype"),
+        url("fonts/Casper.svg#Casper") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik-Regular.eot");
+    src: url("fonts/Rubik-Regular.eot?#iefix") format("embedded-opentype"),
+        url("fonts/Rubik-Regular.woff2") format("woff2"),
+        url("fonts/Rubik-Regular.woff") format("woff"),
+        url("fonts/Rubik-Regular.ttf") format("truetype"),
+        url("fonts/Rubik-Regular.svg#Rubik-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-------------------------------------------*/
+/* BASIC SETUP */
+/*-------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #ffffff;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+header {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+
+.content {
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+
+::-webkit-input-placeholder {color:#555555;}
+::-moz-placeholder          {color:#555555;}
+:-moz-placeholder           {color:#555555;}
+:-ms-input-placeholder      {color:#555555;}
+
+input,
+textarea,
+button,
+select,
+a,
+img {
+    outline: none;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance;
+    text-indent: 0.01px;
+    text-overflow: "";
+}
+
+*::-ms-expand { display: none; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+    -webkit-appearance: none;
+    -moz-appearance;
+}
+
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity .3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity .3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity .3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity .3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity .3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity .3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity .3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity .3s ease;}
+
+textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity .3s ease;}
+textarea::-moz-placeholder                {opacity: 1; transition: opacity .3s ease;}
+textarea:-moz-placeholder                 {opacity: 1; transition: opacity .3s ease;}
+textarea:-ms-input-placeholder            {opacity: 1; transition: opacity .3s ease;}
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity .3s ease;}
+textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity .3s ease;}
+textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity .3s ease;}
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity .3s ease;}
+
+.clearfix:after {
+    content: ""; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+* html .clearfix             { zoom: 1; }
+*:first-child+html .clearfix { zoom: 1; }
+
+/*-------------------------------------------*/
+/* ----- DEFAULT STYLES ------ */
+/*-------------------------------------------*/
+
+section {
+    position: relative;
+    padding: 10px 0;
+}
+
+section > .row {
+    position: relative;
+}
+
+h1 {
+    font-family: "Gilroy";
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 800;
+    color: #0c2fdf;    
+}
+
+h2 {
+    font-family: "Gilroy";
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 800;
+    color: #0c2fdf;
+}
+
+h3 {
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    color: #859299;
+}
+
+h4 {
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #859299;
+}
+
+p {
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #859299;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #859299;
+}
+
+li {
+    list-style: none;
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #859299;
+}
+
+img {
+    outline: none;
+    border: 1px solid transparent;
+    border: none;
+}
+
+button:hover,
+button:active,
+a:hover,
+a:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+
+}
+
+input:focus {
+
+}
+
+textarea {
+
+}
+
+textarea:focus {
+
+}
+
+/*-------------------------------------------*/
+/* ----- REUSABLE COMPONENTS ------ */
+/*-------------------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.overflow_wrapp {
+    overflow: hidden;
+}
+
+.align_center {
+    text-align: center;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.align_left {
+    text-align: left;
+}
+
+/*-------------------------------------------*/
+/* ----- HEADER ------ */
+/*-------------------------------------------*/
+
+.header_site {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    padding: 100px 0 20px 0;
+}
+
+.header_site .left {
+    width: 290px;
+    padding-right: 10px;
+}
+
+.header_site .center {
+    width: calc(100% - 500px);
+    padding: 0 10px;
+}
+
+.header_site .right {
+    width: 210px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+
+.logo > div:nth-child(1) {
+    width: 130px;
+    padding-right: 5px;
+}
+
+.logo > div:nth-child(2) {
+    width: calc(100% -130px);
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.logo h3 {
+    font-family: "Gilroy";
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 800;
+    color: #0c2fdf;
+}
+
+.logo p {
+    font-size: 12px;
+    line-height: 17px;
+    color: #7c8f8f;
+}
+
+.main_nav_wrapp {
+/*    display: inline-block;
+    vertical-align: top;
+    margin: 13px 5px;*/
+}
+
+.main_nav {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin: 52px 0 0 -15%;
+}
+
+.main_nav li {
+    padding: 5px 6%;
+}
+
+.main_nav li a {
+    border-bottom: 1px solid transparent;
+    font-family: "Gilroy";
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: 800;
+    color: #0c2fdf;
+    -webkit-transition-property: border;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: border;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: border;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: border;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: border;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.main_nav li a:link,
+.main_nav li a:visited {
+    border-bottom: 1px solid transparent;
+}
+
+.main_nav li a:active,
+.main_nav li a.active {
+    border-bottom: 1px solid #0c2fdf;
+}
+
+.main_nav li a:hover {
+    border-bottom: 1px solid #0c2fdf;
+}
+
+.best {
+    width: 120px;
+    margin-top: 10px;
+}
+
+.best img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.best p {
+    padding: 9px 0;
+    text-align: center;
+    font-family: "Casper";
+    font-size: 14px;
+    line-height: 17px;
+    color: #8d989d;
+}
+
+/* ----- Responsive Menu Button ------ */
+
+.respmenubtn {
+    /*display: inline-block;*/
+    display: none;
+    vertical-align: top;
+    width: 45px;
+    height: 37px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    top: 6px;
+    z-index: 11;
+    border: 1px solid transparent;
+}
+
+.respmenubtn span {
+    display: block;
+    width: 27px;
+    height: 2px;
+    background: #466896;
+    margin: 0 auto 7px auto;
+    -webkit-transition-property: transform, border, background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform, border, background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform, border, background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform, border, background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform, border, background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.respmenubtn span:last-child {
+    margin: 0 auto;
+}
+
+.respmenubtn:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.respmenubtn:hover span {
+    background: #e9ba5f;
+}
+
+.respmenubtn.active span {
+    position: relative;
+    width: 35px;
+    top: 2px;
+    left: 0;
+    background: #e9ba5f;
+}
+
+.respmenubtn.active span:last-child {
+    display: none;
+}
+
+.respmenubtn.active span:first-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 3px 0 0 0;
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
+
+.respmenubtn.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* ----- / Responsive Menu Button ------ */
+
+.red_mark {
+    height: 190px;
+    width: 24px;
+    border-right: 1px solid #ad5757;
+    position: absolute;
+    top: -59px;
+    right: 0;
+}
+
+.shield {
+    display: inline-block;
+    vertical-align: top;
+    width: 18px;
+    height: 20px;
+    background-image: url(img/shield.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.red_mark .shield {
+    position: absolute;
+    top: 36px;
+    left: 3px;
+}
+
+.red_mark p {
+    width: 130px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #d70000;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 119px;
+    left: -53px;
+}
+
+/*-------------------------------------------*/
+/* ----- CONTENT ------ */
+/*-------------------------------------------*/
+
+/*-- Section 1 - Main Page --*/
+
+.article {
+    margin: 20px 0;
+}
+
+.article img {
+    float: right;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 6px 0 6px 23px;
+}
+
+.article h3 {
+    padding: 11px 0;
+}
+
+.article p {
+    padding: 11px 0;
+}
+
+/*-- /Section 1 - Main Page --*/
+
+/*-- Section 2 - Main Page --*/
+
+.sect_2 {
+    padding: 38px 0 20px 0;
+}
+
+.title_wrapp {
+    text-align: center;
+}
+
+.title_wrapp h2 {
+
+}
+
+.projects_thumbs {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    margin: 40px -15px 37px -15px;
+}
+
+.project_thumb {
+    display: block;
+    cursor: pointer;
+    width: calc(25% - 30px);
+    margin: 15px;
+    overflow: hidden;
+}
+
+.project_thumb .img_box {
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform;
+    -moz-transition-duration: 2s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform;
+    -ms-transition-duration: 2s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.project_thumb .img_box:link,
+.project_thumb .img_box:visited {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.project_thumb .img_box:active,
+.project_thumb .img_box.active {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.project_thumb .img_box:hover {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.project_thumb .img_box img {
+    display: block;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.fudo_mark {
+    height: 100px;
+    border-left: 1px solid #000000;
+    position: absolute;
+    top: -61px;
+    right: 0;
+}
+
+.fudo_mark p {
+    width: 70px;
+    font-family: "Playfair Display";
+    font-size: 12px;
+    line-height: 24px;
+    color: #000000;
+    position: absolute;
+    top: 60px;
+    left: -47px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+/*-- /Section 2 - Main Page --*/
+
+/*-------------------------------------------*/
+/* ----- FOOTER ------ */
+/*-------------------------------------------*/
+
+footer {
+    padding: 1px 0;
+}
+
+.footer_section {
+    padding: 18px 0 52px 0;
+}
+
+.footer_section > .row {
+    position: relative;
+}
+
+.footer_section p {
+    font-size: 12px;
+    line-height: 24px;
+    color: #93959f;
+}
+
+.date {
+    height: 120px;
+    width: 38px;
+    border-right: 1px solid #a8a8a8;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+}
+
+.date p {
+    font-family: "Playfair Display";
+    font-size: 12px;
+    line-height: 48px;
+    color: #000000;
+    position: absolute;
+    top: 46px;
+    left: -22px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.date p span {
+    font-size: 48px;
+}
+
+/*-- Animation --*/
+
+.leftSlice {
+    position: relative;
+    left: -3%;
+    opacity: 0;
+    -webkit-transition-property: left, opacity;
+    -webkit-transition-duration: .7s;
+    -webkit-transition-delay: .3s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: left, opacity;
+    -moz-transition-duration: .7s;
+    -moz-transition-delay: .3s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: left, opacity;
+    -ms-transition-duration: .7s;
+    -ms-transition-delay: .3s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: left, opacity;
+    -o-transition-duration: .7s;
+    -o-transition-delay: .3s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: left, opacity;
+    transition-duration: .7s;
+    transition-delay: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.animate.active.leftSlice {
+    left: 0;
+    opacity: 1;
+}
+
+.fadeIn {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .7s;
+    -webkit-transition-delay: .3s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: opacity;
+    -moz-transition-duration: .7s;
+    -moz-transition-delay: .3s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: opacity;
+    -ms-transition-duration: .7s;
+    -ms-transition-delay: .3s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: opacity;
+    -o-transition-duration: .7s;
+    --transition-delay: .3s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: opacity;
+    transition-duration: .7s;
+    transition-delay: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.animate.active.fadeIn {
+    opacity: 1;
+}
+
+.zoomFade {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition-property: opacity, transform;
+    -webkit-transition-duration: .7s;
+    -webkit-transition-delay: .3s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: opacity, transform;
+    -moz-transition-duration: .7s;
+    -moz-transition-delay: .3s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: opacity, transform;
+    -ms-transition-duration: .7s;
+    -ms-transition-delay: .3s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: opacity, transform;
+    -o-transition-duration: .7s;
+    --transition-delay: .3s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: opacity, transform;
+    transition-duration: .7s;
+    transition-delay: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.animate.active.zoomFade {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
+.fadeInUp {
+    position: relative;
+    bottom: -20px;
+    opacity: 0;
+    -webkit-transition-property: bottom, opacity;
+    -webkit-transition-duration: .7s;
+    -webkit-transition-delay: .3s;
+    -webkit-transition-timing-function: ease-in-out;
+
+    -moz-transition-property: bottom, opacity;
+    -moz-transition-duration: .7s;
+    -moz-transition-delay: .3s;
+    -moz-transition-timing-function: ease-in-out;
+
+    -ms-transition-property: bottom, opacity;
+    -ms-transition-duration: .7s;
+    -ms-transition-delay: .3s;
+    -ms-transition-timing-function: ease-in-out;
+
+    -o-transition-property: bottom, opacity;
+    -o-transition-duration: .7s;
+    -o-transition-delay: .3s;
+    -o-transition-timing-function: ease-in-out;
+
+    transition-property: bottom, opacity;
+    transition-duration: .7s;
+    transition-delay: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.animate.active.fadeInUp {
+    bottom: 0;
+    opacity: 1;
+}
+
+/*-- /Animation --*/

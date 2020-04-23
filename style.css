@@ -94,6 +94,8 @@ body {
 header {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
+    position: relative;
+    z-index: 3;
 }
 
 .content {
@@ -275,22 +277,6 @@ a:active {
     -webkit-tap-highlight-color: transparent;
 }
 
-input {
-
-}
-
-input:focus {
-
-}
-
-textarea {
-
-}
-
-textarea:focus {
-
-}
-
 /*-------------------------------------------*/
 /* ----- REUSABLE COMPONENTS ------ */
 /*-------------------------------------------*/
@@ -320,6 +306,10 @@ textarea:focus {
 /*-------------------------------------------*/
 /* ----- HEADER ------ */
 /*-------------------------------------------*/
+
+#header {
+    background: #ffffff;
+}
 
 .header_site {
     display: flex;
@@ -413,12 +403,6 @@ textarea:focus {
     color: #7c8f8f;
 }
 
-.main_nav_wrapp {
-/*    display: inline-block;
-    vertical-align: top;
-    margin: 13px 5px;*/
-}
-
 .main_nav {
     display: flex;
     display: -webkit-flex;
@@ -505,8 +489,8 @@ textarea:focus {
     background: transparent;
     cursor: pointer;
     position: relative;
-    top: 6px;
-    z-index: 11;
+    top: 14px;
+    z-index: 13;
     border: 1px solid transparent;
 }
 
@@ -547,7 +531,7 @@ textarea:focus {
 }
 
 .respmenubtn:hover span {
-    background: #e9ba5f;
+    background: #0c2fdf;
 }
 
 .respmenubtn.active span {
@@ -555,7 +539,7 @@ textarea:focus {
     width: 35px;
     top: 2px;
     left: 0;
-    background: #e9ba5f;
+    background: #0c2fdf;
 }
 
 .respmenubtn.active span:last-child {
@@ -639,8 +623,8 @@ textarea:focus {
     margin: 6px 0 6px 23px;
 }
 
-.article h3 {
-    padding: 11px 0;
+.resp_title {
+    display: none;
 }
 
 .article p {
@@ -657,10 +641,6 @@ textarea:focus {
 
 .title_wrapp {
     text-align: center;
-}
-
-.title_wrapp h2 {
-
 }
 
 .projects_thumbs {
@@ -775,6 +755,10 @@ footer {
 }
 
 .footer_section > .row {
+    position: relative;
+}
+
+.inner_wrapp {
     position: relative;
 }
 

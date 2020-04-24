@@ -11,7 +11,7 @@
         url("fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
         url("fonts/PlayfairDisplay-Regular.woff") format("woff"),
         url("fonts/PlayfairDisplay-Regular.ttf") format("truetype"),
-        url("fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular") format("svg");
+        url("fonts/PlayfairDisplay-Regular.svg#fonts/PlayfairDisplay-Regular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -327,6 +327,7 @@ a:active {
 .header_site .center {
     width: calc(100% - 500px);
     padding: 0 10px;
+    overflow: hidden;
 }
 
 .header_site .right {
@@ -357,34 +358,6 @@ a:active {
     display: block;
     width: auto;
     max-width: 100%;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition-property: transform;
-    -webkit-transition-duration: 1s;
-    -webkit-transition-timing-function: ease;
-
-    -moz-transition-property: transform;
-    -moz-transition-duration: 1s;
-    -moz-transition-timing-function: ease;
-
-    -ms-transition-property: transform;
-    -ms-transition-duration: 1s;
-    -ms-transition-timing-function: ease;
-
-    -o-transition-property: transform;
-    -o-transition-duration: 1s;
-    -o-transition-timing-function: ease;
-
-    transition-property: transform;
-    transition-duration: 1s;
-    transition-timing-function: ease;
-}
-
-.logo:hover > div:nth-child(1) img {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    transform: scale(1.1);
 }
 
 .logo h3 {
